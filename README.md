@@ -166,6 +166,7 @@ tests/test_pipeline.py::test_end_to_end_smoke PASSED
 |---|---|---|
 | DataFrame | **pandas** | Industry standard for analyst-size data |
 | Validation | **pandera** | Expressive schema-as-code with column-level rules |
+| LLM (optional) | **OpenAI** (`gpt-4o-mini`) | Function-calling + JSON mode for the quality auditor |
 | Visualization | **matplotlib** | Lightweight missing-value matrices |
 | Testing | **pytest** | Standard Python testing framework |
 | Versioning | **git + GitHub** | Reproducible, branchable, reviewable |
@@ -208,6 +209,55 @@ retail-cleaning-pipeline/
     |-- cleaning_decisions.md     <- the *why* behind every stage
     +-- data_dictionary.md        <- column-level documentation
 ```
+
+---
+
+## LLM Quality Auditor
+
+The pipeline ships with an optional **LLM-powered quality auditor** that runs after the deterministic cleaning stages. It reads the before/after profiles, optionally calls a few inspection tools, and returns a structured critique with suggested new validation rules.
+
+- **Hybrid pattern**: function-calling for tool use, JSON mode for the final report.
+- **Bounded loop**: maximum 4 turns, then falls back to a static report.
+- **Graceful degradation**: if `OPENAI_API_KEY` is not set, the pipeline still completes with a stub audit.
+- **Cost**: ~$0.01-0.05 per run with `gpt-4o-mini`.
+- **Tested** with a deterministic `FakeLLMClient` (8 tests) and a gated live integration test (`tests/live/`, requires `RUN_LIVE_LLM=1`).
+
+### Sample audit report
+
+```markdown
+# Agent Audit
+**Cleaning removed 2 duplicate rows and dropped the missing-cell rate from 7.14% to 6.39%.**
+
+## What went well
+- All 13 mixed date formats were normalized to ISO YYYY-MM-DD.
+- Seven representations of missing were unified into a single null type.
+- Outlier handling used a flag-not-drop approach, preserving the row for human review.
+
+## Concerns
+- One unit_price outlier ($12,999,999) is still in the cleaned data and needs finance review.
+- The dataset is only 24 rows; results are illustrative, not statistically meaningful.
+
+## Suggested new validation rules
+- **quantity** (value_range): Quantity >1000 is likely a B2B order or a typo.
+- **customer_email** (str_regex): TLD length check catches typos like .comm or .c.
+```
+
+### How to enable
+
+```bash
+# 1. Install the optional dependency (already in requirements.txt)
+pip install openai>=1.40.0
+
+# 2. Set your API key
+export OPENAI_API_KEY=sk-...
+
+# 3. Run the agent audit
+python -m src.agent
+```
+
+Without a key, the same command produces a static fallback report (the pipeline still runs).
+
+> **Note**: the agent is a **critic**, not a controller. Cleaning decisions remain deterministic in `pipeline.py`; the LLM only suggests what additional rules the team might add next sprint.
 
 ---
 

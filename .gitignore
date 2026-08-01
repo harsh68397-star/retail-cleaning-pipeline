@@ -1,24 +1,11 @@
-# Python
-__pycache__/
-*.py[cod]
-*.egg-info/
-.pytest_cache/
-.venv/
+﻿__pycache__/
 venv/
-
-# Jupyter
-.ipynb_checkpoints/
-*.ipynb
-
-# Data - we keep raw but ignore generated artifacts
 data/processed/*.csv
-
-# Outputs
 outputs/*.png
 outputs/before_after_summary.md
 
-# Editors
-.vscode/
-.idea/
-.DS_Store
-
+# Throwaway build/edit helpers (created by automation during dev)
+_*.py
+_*.txt
+_b64_*.txt
+_build_*.py

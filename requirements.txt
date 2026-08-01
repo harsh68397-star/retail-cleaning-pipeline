@@ -4,3 +4,6 @@ pandera>=0.20
 matplotlib>=3.8
 pytest>=8.0
 
+
+# Optional: LLM-powered quality auditor (requires OPENAI_API_KEY env var)
+openai>=1.40.0
