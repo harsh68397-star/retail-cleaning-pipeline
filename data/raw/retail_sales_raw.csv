@@ -1,0 +1,27 @@
+order_id,order_date,customer_name,city,country,product,category,quantity,unit_price,discount,sales_rep_email,customer_email,payment_method,notes
+1001,12/05/2024,  Alice Johnson  ,New York,USA,Laptop X200,Electronics,2,"""1,299.99""",0.10,mike@firm.com,alice@example.com,credit,
+1002,2024-05-13,bob smith,new york,USA,Mouse M01,Electronics,5,24.99,,sara@firm.com,bob@example.com,Credit,
+1003,"May 14, 2024",CARL DAVIS,LOS ANGELES,USA,Desk Pro,Furniture,1,"""2,499.00""",0.00,mike@firm.com,carl@example.com,debit,fast shipping
+1004,15-05-2024, Diana  Prince , Chicago ,USA,Laptop X200,Electronics,1,1299.99,0.05,sara@firm.com,diana@example.com,PayPal,
+1005,2024.05.16,eve Adams,Boston,usa,Chair Ergo,Furniture,4,349.50,0.15,mike@firm.com,eve@example.com,credit,
+1006,05/17/2024,Frank Wright,Boston,USA,"Monitor 27""",Electronics,2,"""549.99""",0.00,sara@firm.com,frank@example.com,credit,
+1007,2024-05-18,grace hopper,seattle,USA,Keyboard K,Electronics,3,89.90,0.05,mike@firm.com,grace@example.com,Debit,
+1008,May 19 2024,Henry Ford,Detroit,USA,Desk Pro,Furniture,1,2499.00,0.00,sara@firm.com,henry@example.com,credit,
+1009,20/05/2024,Iris West,Miami,USA,Laptop X200,Electronics,3,1299.99,0.10,mike@firm.com,iris@example.com,paypal,
+1010,2024-05-21,jack ryan,Washington,USA,Chair Ergo,Furniture,2,349.50,,sara@firm.com,jack@example.com,CREDIT,
+1011,N/A,Karen Lee,Phoenix,USA,Mouse M01,Electronics,10,24.99,0.00,mike@firm.com,karen@example.com,credit,
+1012,22/05/2024,Leo Martin,Denver,USA,"Monitor 27""",Electronics,1,549.99,0.05,sara@firm.com,leo@example.com,debit,
+1013,2024-05-23,mona lisa,Paris,France,Desk Pro,Furniture,1,2499.00,0.00,mike@firm.com,mona@example.com,credit,cafe order
+1014,24-05-2024,Naive Noa,Munchen,Germany,Keyboard K,Electronics,5,89.90,0.10,sara@firm.com,noa@example.de,PayPal,
+1015,?,Oscar Wilde,Dublin,Ireland,Chair Ergo,Furniture,-1,349.50,0.00,mike@firm.com,oscar@example.ie,credit,
+1016,2024-05-26,peter parker,New York,USA,Mouse M01,Electronics,4,24.99,0.05,sara@firm.com,peter@example.com,credit,
+1017,"May 27, 2024",QUINCY JONES,los angeles,USA,Laptop X200,Electronics,1,12999999.99,0.00,mike@firm.com,quincy@example.com,credit,fat-finger price
+1018,28/05/2024,Rita Ora,London,UK,"Monitor 27""",Electronics,2,549.99,0.05,sara@firm.com,rita@example.co.uk,credit,
+1019,2024-05-29,sam alt,Austin,USA,Desk Pro,Furniture,1,2499.00,0.00,mike@firm.com,sam@example.com,debit,
+1020,30-05-2024,Tina Fey,New York,USA,Chair Ergo,Furniture,6,349.50,0.15,sara@firm.com,tina@example.com,credit,
+1001,12/05/2024,Alice Johnson,New York,USA,Laptop X200,Electronics,2,1299.99,0.10,mike@firm.com,alice@example.com,credit,
+1004,15-05-2024,Diana Prince,Chicago,USA,Laptop X200,Electronics,1,1299.99,0.05,sara@firm.com,diana@example.com,PayPal,
+1022,2024-06-01,Victor Hugo,Paris,France,Mouse M01,Electronics,3,24.99,0.00,sara@firm.com,victor@example.fr,debit,
+1023,02-06-2024,Wendy Wu,Singapore,Singapore,Keyboard K,Electronics,8,89.90,0.10,mike@firm.com,wendy@example.sg,PayPal,
+1024,2024.06.03,Xander Cage,Sydney,Australia,"Monitor 27""",Electronics,2,549.99,0.00,sara@firm.com,xander@example.au,credit,
+1025,04/06/2024,Yara Shahidi,Mumbai,India,Desk Pro,Furniture,1,2499.00,0.05,mike@firm.com,yara@example.in,debit,

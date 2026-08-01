@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Data - we keep raw but ignore generated artifacts
+data/processed/*.csv
+
+# Outputs
+outputs/*.png
+outputs/before_after_summary.md
+
+# Editors
+.vscode/
+.idea/
+.DS_Store
+
