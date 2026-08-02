@@ -1,4 +1,4 @@
-# Interview Walkthrough — How to Talk Through This Project
+# Architecture Walkthrough — How to Talk Through This Project
 
 Use this as a 3-minute script when an interviewer asks
 *"Walk me through a project on your resume."*
