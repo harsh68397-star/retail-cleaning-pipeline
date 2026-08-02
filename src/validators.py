@@ -1,6 +1,5 @@
-"""Pandera schemas for validating the cleaned retail dataset."""
+﻿"""Pandera schemas for validating the cleaned retail dataset."""
 import pandera.pandas as pa
-from pandera import Check
 
 
 class CleanSalesSchema(pa.DataFrameModel):
@@ -15,11 +14,6 @@ class CleanSalesSchema(pa.DataFrameModel):
       - Customer name regex allows 1-3 capitalized words to handle
         cultures with single-word names (e.g. Madonna, Cher).
     """
-    order_id: int = pa.Field(ge=1000, le=99999)
-    order_date: pa.DateTime = pa.Field(nullable=True)
-    customer_name: str = pa.Field(
-        str_matches=r"^[A-Z][a-zA-Z]*(?: [A-Z][a-zA-Z]*){0,3}$"
-    )
     order_id: int = pa.Field(ge=1000, le=99999)
     order_date: pa.DateTime = pa.Field(nullable=True)
     customer_name: str = pa.Field(
@@ -53,4 +47,3 @@ class CleanSalesSchema(pa.DataFrameModel):
 def validate(df, lazy=True):
     """Validate a cleaned DataFrame; raise SchemaError on failure."""
     return CleanSalesSchema.validate(df, lazy=lazy)
-
