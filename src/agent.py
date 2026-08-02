@@ -1,4 +1,4 @@
-﻿"""LLM-powered quality auditor that runs after the deterministic pipeline.
+"""LLM-powered quality auditor that runs after the deterministic pipeline.
 
 The agent does NOT make cleaning decisions (those stay deterministic in
 ``pipeline.py``). Instead, it reads the before/after profiles, optionally

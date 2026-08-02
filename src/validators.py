@@ -1,4 +1,4 @@
-﻿"""Pandera schemas for validating the cleaned retail dataset."""
+"""Pandera schemas for validating the cleaned retail dataset."""
 import pandera.pandas as pa
 
 

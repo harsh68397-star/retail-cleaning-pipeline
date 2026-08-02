@@ -1,4 +1,4 @@
-﻿"""Thin OpenAI wrapper with hybrid tool-calling + JSON mode support.
+"""Thin OpenAI wrapper with hybrid tool-calling + JSON mode support.
 
 Designed to be swapped out in tests by passing a fake client.
 """
