@@ -1,6 +1,6 @@
 # Data Dictionary — `retail_sales_clean.csv`
 
-The output of `python src/pipeline.py`. Every column's meaning,
+The output written to `data/processed/retail_sales_clean.csv` by `python -m src.pipeline`. Every column's meaning,
 type, and the cleaning rule applied.
 
 | Column | Type | Description | Cleaning rule |
