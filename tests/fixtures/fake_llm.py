@@ -1,4 +1,4 @@
-﻿"""Deterministic stub for the OpenAI client used in tests.
+"""Deterministic stub for the OpenAI client used in tests.
 
 The ``FakeLLMClient`` plays back a scripted list of ``LLMResponse`` objects,
 one per ``complete_with_tools`` / ``complete_json`` call. Tests can inspect

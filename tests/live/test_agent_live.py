@@ -1,4 +1,4 @@
-﻿"""Live integration test for the agent.
+"""Live integration test for the agent.
 
 Skipped unless ``RUN_LIVE_LLM=1`` is set in the environment AND a real
 ``OPENAI_API_KEY`` is available. This test calls the real OpenAI API and

@@ -1,4 +1,4 @@
-﻿"""Tests for the CleaningAgent.
+"""Tests for the CleaningAgent.
 
 All tests use ``FakeLLMClient`` so no real API key is required.
 """
